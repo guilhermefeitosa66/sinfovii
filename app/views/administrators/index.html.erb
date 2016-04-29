@@ -1,0 +1,125 @@
+
+<div class="row">
+
+  <div class="large-12 columns">
+    <h1><%= link_to 'Lista Geral',member_index_path %></h1>
+    <h1><%= link_to 'Lista Geral não confirmados',list_index_path %></h1>
+    <h1>Painel Administrador</h1>
+                      <div class="large-6 columns">
+                        <h3>Artigos</h3>  
+                          <table>
+                                <thead>
+                                  <tr>
+                                    <th>Pessoa</th>
+                                    <th>Camisa</th>
+                                    
+                                  </tr> 
+                                </thead>
+                                <tbody>
+                                  <% @shirts.each do |user| %>
+                                    <% if user.shirt != ''%>
+                                    <tr>
+                                      <td><%= user.name %></td>
+                                      <td><%= user.shirt %></td>  
+                                    </tr>
+                                    <% end %>
+                                  <% end %>
+                                </tbody>    
+                            </table>
+                    
+                      </div>
+
+
+                        <div class="large-6 columns">
+                          <h3>Cursos</h3>
+
+                            <table>
+                                <thead>
+                                  <tr>
+                                      <th>Nome</th>
+                                    <th>Categoria</th>
+                                       <th>Confirmados</th>
+                                       <th>Não Confirmados</th>
+                                      <th colspan="2"></th>
+                                  </tr>
+                                </thead>
+
+                                <tbody>
+                                  <% @courses.each do |course| %>
+                                    <tr>
+                                      <td><%= course.name %></td>
+                                     <td><%= course.category %></td>
+                                     <td><%= course.registereds.where(pay: 1).count %></td>
+                                     <td><%= course.registereds.where(pay: 0).count %></td>
+                                      <td><%= link_to 'Exibir', course %></td>
+                                      <td><%= link_to 'Apagar', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                                    </tr>
+                                  <% end %>
+                                </tbody>
+                                <%= link_to 'Novo Curso', new_course_path %>
+                            </table>
+                        </div>
+  </div>
+
+      <div class="large-12 columns">
+
+                        <div class="large-6 columns">
+                        <h3>Contatos</h3>
+
+                          <table>
+                              <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                  <th>Mensagem</th>
+                                    <th colspan="2"></th>
+                                </tr>
+                              </thead>
+
+                              <tbody>
+                                     <% @contacts.each do |contact| %>
+                                <tr>
+                                    <td><%= contact.name %></td>
+                                    <td><%= contact.obs %></td>
+                                    <td><%= link_to 'Show', contact %></td>
+                                    <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                                </tr>
+                                <% end %>
+                              </tbody>
+                          </table>
+
+                        
+
+                      </div>
+
+
+                      <div class="large-6 columns">
+                        <h3>Inscritos</h3>
+                        
+                          <table>
+                              <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>e-mail</th>
+                                    <th>Pagamento</th>
+                                    <th>id</th>
+                                    <th colspan="2"></th>
+                                </tr>
+                              </thead>
+
+                              <tbody>
+                                <% @users.each do |user| %>
+                                  <tr>
+                                    <td><%= user.name %></td>
+                                    <td><%= user.email %></td>
+                                    <td><%= user.status %></td>
+                                    <td><%= user.id %></td>
+                                    <td><%= link_to 'confirmar', confirmation_path(user.id) %></td>
+                                    
+                                  </tr>
+                                <% end %>
+                              </tbody>
+                          </table>
+                      </div>
+    
+      </div>
+</div>

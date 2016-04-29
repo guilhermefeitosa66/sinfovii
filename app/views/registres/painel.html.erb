@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="large-12 columns">
+  	<h4>Acompanhe sua inscrição.</h4>
+
+  	 <table>
+              <thead>
+                <tr>
+                  <th>Inscrito</th>
+                  <th>Pagamento</th>
+                  <th colspan="2"></th>
+                </tr> 
+              </thead>  
+              <tbody>
+               
+                  <tr>
+                    <td><%= @usuario.name%></td>
+                  	<td><%= @usuario.status %></td>
+                    <td><%= link_to 'Alterar senha', edit_user_registration_path %></td>
+                  </tr>
+              </tbody>    
+          </table> 
+          <%= link_to 'Realizar Pagamento' , checkout_path(@usuario.id) %> <br />
+          <li> <%= link_to "Problemas? Entre em contato", new_contact_path %> </li>
+
+  </div>
+</div>

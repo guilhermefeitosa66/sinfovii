@@ -1,0 +1,28 @@
+# Postgre config
+
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  pool: 5
+  username: root
+  password: senha
+  host: localhost
+  port: 5432
+
+development:
+  <<: *default
+  database: test
+
+test:
+  <<: *default
+  database: Sinfo_test
+
+production:
+  encoding: utf8
+  pool: 5
+  username: qomogddbkurctx
+  password: jf7CZSzDu3ru4ePrbhvvNTmMaA
+  host: ec2-54-83-36-203.compute-1.amazonaws.com
+  database: dc9590aqc49dpl
+  adapter: postgresql
+  port: 5432

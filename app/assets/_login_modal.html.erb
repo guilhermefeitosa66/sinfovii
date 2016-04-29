@@ -1,0 +1,41 @@
+<!-- modal content -->
+<div id="myModal" class="reveal-modal remove-whitespace" data-reveal>
+  <div class="row">
+    <div class="large-6 columns auth-plain">
+      <div class="signup-panel left-solid">
+        <p class="welcome">Usuário registrado</p>
+        <form>
+          <div class="row collapse">
+            <div class="small-2  columns">
+              <span class="prefix"><i class="fi-torso-female"></i></span>
+            </div>
+            <div class="small-10  columns">
+              <input type="text" placeholder="username">
+            </div>
+          </div>
+          <div class="row collapse">
+            <div class="small-2 columns ">
+              <span class="prefix"><i class="fi-lock"></i></span>
+            </div>
+            <div class="small-10 columns ">
+              <input type="text" placeholder="password">
+            </div>
+          </div>
+        </form>
+        <%= link_to "Login", painel_admin_path, class: 'button radius'%>
+      </div>
+    </div>
+
+    <div class="large-6 columns auth-plain">
+      <div class="signup-panel newusers">
+        <p class="welcome"> É novo por aqui?</p>
+        <p>Inscreva-se e venha fazer parte do maior evento de tecnologia do centro-sul piauiense!</p><br>
+        <%= link_to "Inscreva-se", new_inscrito_path, class: 'button radius'%>
+      </div>
+    </div>
+
+  </div>   
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+</div>
+<!-- modal content -->

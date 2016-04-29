@@ -1,0 +1,10 @@
+<h1>Lista de membros confirmados</h1>
+<P>
+	<H4>Geral</H4>
+	Total de inscritos <%= @membros.count %>
+	<% @membros.each do |membro| %>
+		<%= membro.name %>
+		<%= membro.registereds.count %> <br>
+		<br>
+	<% end %>
+</P>

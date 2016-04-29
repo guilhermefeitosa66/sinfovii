@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Article:</strong>
+  <%= @panelist.article %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @panelist.user.name %>
+</p>
+
+<%= link_to 'Editar', edit_panelist_path(@panelist) %> |
+<%= link_to 'Voltar', administrators_path %>

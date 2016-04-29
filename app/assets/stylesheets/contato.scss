@@ -1,0 +1,147 @@
+// Place all the styles related to the contato controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.contact-footer {
+	background-color: #19708E;;
+	padding: 3.5rem 0;
+	.round-inputs input {
+		height: 3.3125rem;
+	}
+	.round-inputs textarea {
+		height: 8rem;
+	}
+	h1{
+		color: #e5e5e5;
+
+	}
+	h4 {
+		color: #e5e5e5;
+		font-weight: 5rem;
+		margin-bottom: 0.25rem;
+	}
+	h4.phone {
+		margin-bottom: 3rem;
+		&:before {
+		  font-family: "foundation-icons";
+		  content: "\f1f8";
+		  font-weight: 300;
+		  padding-top: 0.2rem;
+		  font-size: 2rem;
+		  color: #e5e5e5;
+		  padding-left: 0.5rem;
+		  padding-right: 1.65rem;
+		  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+   		-webkit-text-stroke-width: 1px;
+   		-webkit-text-stroke-color: #e5e5e5;
+		}
+		@media only screen and (max-width: 40em) {
+			font-size: 0.875rem;
+		}
+	}
+	h4.email {
+		&:before {
+		  font-family: "foundation-icons";
+		  content: "\f16d";
+		  font-weight: 300;
+		  padding-top: 0.5rem;
+		  font-size: 2rem;
+		  color: #e5e5e5;
+		  padding-left: 0.5rem;
+		  padding-right: 1.55rem;
+		  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+   		-webkit-text-stroke-width: 1px;
+   		-webkit-text-stroke-color: #e5e5e5;
+		}
+	}
+	h4.location {
+		&:before {
+		  font-family: "foundation-icons";
+		  content: "\f172";
+		  font-weight: 300;
+		  padding-top: 0.2rem;
+		  font-size: 2rem;
+		  color: #e5e5e5;
+		  padding-left: 0.5rem;
+		  padding-right: 1.85rem;
+		  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+   		-webkit-text-stroke-width: 1px;
+   		-webkit-text-stroke-color: #e5e5e5;
+		}
+	}
+	p {
+		color: #e5e5e5;
+		font-weight: 100;
+		font-size: 1rem;
+		margin-bottom: 3rem;
+		margin-left: 3.5rem;
+	}
+	p.form-lead {
+		font-weight: 200;
+		font-size: 1rem;
+		margin-bottom: 0.5rem;
+		margin-left: 0;
+	}
+	p.form-lead-in {
+		color: #E87E04;
+		font-weight: 300;
+		font-size: 1rem;
+		margin-bottom: 0.5rem;
+		margin-left: 0;
+	}
+	@media only screen and (max-width: 40em) {
+		.social i {
+			font-size: 2rem;
+			margin-right: 0.5rem;
+		}
+	}
+	.inline-list {
+		margin: 0 0 0.5rem -0.3rem;
+	  > li {
+		  margin-left: 0.5rem;
+		}
+	}
+	@media only screen and (max-width: 40em) {
+		.inline-list > li {
+	  	margin-bottom: 0.875rem;
+		}
+	}
+}
+
+
+.contact-footer {
+	background-color: #19708E;;
+	padding: 3.5rem 0;
+	.round-inputs input {
+		height: 3.3125rem;
+	}
+	.round-inputs textarea {
+		height: 8rem;
+	}
+	h1{
+		color: #e5e5e5;
+
+	}
+	h4 {
+		color: #e5e5e5;
+		font-weight: 100;
+		margin-bottom: 0.25rem;
+	}
+	
+}
+
+  .inline-list a {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-color: #04BFFE;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    margin: 0 3px 0 0;
+  }
+
+
+
+              

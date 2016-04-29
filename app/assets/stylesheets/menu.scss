@@ -1,0 +1,37 @@
+// Place all the styles related to the menu controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+   @media only screen and (min-width: 40.063em) { 
+
+  .logo-wrapper {
+    position: relative;
+  }
+
+.logo-wrapper .logo {
+    width: 15rem;
+    position: absolute;
+  }
+
+
+  // Right part
+  .top-bar-section ul.right {
+    width: 5%;
+  }
+  
+  .top-bar-section ul.right li {
+    float:  left;
+  }
+
+  // Left part
+  .top-bar-section ul.left {
+    width:  85%;
+  }
+
+  .top-bar-section ul.left li {
+    float:  right;
+  }
+}
+
+a#login {
+  border-left: 0.1rem solid #186B87;
+}

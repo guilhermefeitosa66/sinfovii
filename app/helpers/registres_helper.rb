@@ -1,0 +1,2 @@
+module RegistresHelper
+end

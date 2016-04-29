@@ -1,0 +1,18 @@
+<div class="home">
+	<h1>Lista de membros não confirmados</h1>
+<P>
+	<H4>Geral</H4>
+
+	Total de inscritos <%= @membros.count %>
+	<hr>
+	<% @membros.each do |membro| %>
+		<%= membro.name %> <br>
+		Cursos:  <br>
+		<% membro.courses.each do |curso| %>
+			<%= curso.name %> <br>
+		<% end %>
+		<hr>
+		<br>
+	<% end %>
+</P>	
+</div>

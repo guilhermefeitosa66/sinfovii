@@ -1,0 +1,19 @@
+<div class="menu">
+  <a href="#" onclick="print_certificado()" class="button radius">Imprimir certificado</a>
+</div>
+
+<div class="certificado">
+  <div class="certificado-bg">
+    <%= image_tag 'certificado-bg.png', class: 'img-responsive' %>
+  </div>
+
+  <div class="certificado-content">
+    <p>texto do certificado <strong>nome</strong></p>
+  </div>
+</div>
+
+<script type="text/javascript">
+  function print_certificado() {
+    window.print();
+  }
+</script>

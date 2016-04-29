@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lista de expositores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Article</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @panelists.each do |panelist| %>
+      <tr>
+        <td><%= panelist.article %></td>
+        <td><%= panelist.user %></td>
+        <td><%= link_to 'Mostrar', panelist %></td>
+        <td><%= link_to 'Editar', edit_panelist_path(panelist) %></td>
+        <td><%= link_to 'Apagar', panelist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo', new_panelist_path %>

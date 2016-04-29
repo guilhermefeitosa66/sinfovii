@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title><%= content_for?(:title) ? yield(:title) : "SINFO" %></title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css" >
+	<%= stylesheet_link_tag    "application" %>
+	<%= javascript_include_tag "vendor/modernizr" %>
+	<%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+</head>
+
+<body>
+	<% if flash[:notice] %>
+		<div class="messages">
+			<%= flash[:notice] %>
+		</div>
+	<% end %>
+	
+	<!-- Colocar controle para carregar o topo dependendo da sessão -->
+	<%#render "../assets/topo"%>
+
+	<%= yield %>
+
+	<%#render "../assets/rodape"%>
+
+</body>
+</html>

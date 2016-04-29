@@ -1,0 +1,125 @@
+<div class="row">
+
+<div class="large-12 columns">
+   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+   <h2>Cadastre-se</h2>
+
+     <%= devise_error_messages! %>
+
+     <div class="field">
+       <%= f.label :email %><br />
+       <%= f.email_field :email, autofocus: true %>
+     </div>
+
+     <div class="field">
+       <%= f.label :senha %>
+       <% if @minimum_password_length %>
+       <em>(<%= @minimum_password_length %> characters minimum)</em>
+       <% end %><br />
+       <%= f.password_field :password, autocomplete: "off" %>
+     </div>
+
+     <div class="field">
+       <%= f.label :confirmação_de_senha %><br />
+       <%= f.password_field :password_confirmation, autocomplete: "off" %>
+     </div>
+
+     <%# new fields %>
+     <div class="field">
+       <%= f.label :nome %><br />
+       <%= f.text_field :name %>
+     </div>
+
+     <div class="field">
+       <%= f.label :cpf %><br />
+       <%= f.text_field :cpf %>
+     </div>
+
+     <div class="field">
+       <%= f.label :nascimento %><br />
+       <%= f.date_select :birthday,:start_year => Date.current.year, :end_year => 1920%>
+     </div>
+
+     <div class="field">
+       <%= f.label :cidade %><br />
+       <%= f.text_field :city %>
+     </div>
+
+     <div class="field">
+       <%= f.label :estado %><br />
+       <%= f.select :state, options_for_select(["AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO","RR","SC", "SP", "SE", "TO"], "PI") %>
+     </div>
+
+     <div class="field">
+       <%= f.label :telefone %><br />
+       <%= f.text_field :telephone %>
+     </div>
+
+     <div class="field">
+       <%= f.label :instituição %><br />
+       <%= f.text_field :institution %>
+     </div>
+          <div class="field">
+       <%= f.label :alojamento? %><br />
+       <%= f.select :accommodation, options_for_select([ "Sim", "Não"], "Não") %>
+     </div>
+ <!--
+     <%= image_tag('camisa.jpg') %>
+
+      <div class="field">
+       *Por mais R$ 22,00 em sua inscrição,
+       <%= f.label :deseja_uma_camisa? %><br />
+       <%= f.select :shirt, options_for_select([ "GG","G","M","P","PP" ]), prompt: "Nenhuma" %>
+     </div>
+       -->
+
+   <h3>Opções de Inscrição</h3>
+     <div class="large-4 medium-4 columns">
+        <ul class="pricing-table active-tb shadow mrgn-20-top">
+          <li class="title">Inscrição Simples</li>
+          <li class="bullet-item">Feira Tecnologica</li>
+          <li class="bullet-item">Palestras</li>
+          <li class="price">R$ 20,00</li>
+          <!-- <li class="cta-button"><input type="radio" name="pacote" value="" id="pacote1"></li> -->
+
+        </ul>
+      </div>
+     <div class="large-4 medium-4 columns">
+        <ul class="pricing-table active-tb shadow mrgn-20-top">
+          <li class="title">Pacote 1</li>
+          <li class="bullet-item">Inscricao simples</li>
+          <li class="bullet-item">+ 1 Minicurso</li>
+          <li class="price">R$ 30,00</li>
+          <!-- <li class="cta-button"><input type="radio" name="pacote" value="" id="pacote2"></li> -->
+        </ul>
+      </div>
+     <div class="large-4 medium-4 columns">
+        <ul class="pricing-table active-tb shadow mrgn-20-top">
+          <li class="title">Pacote 2</li>
+           <li class="bullet-item">Inscricao simples</li>
+          <li class="bullet-item">+ 2 Minicurso</li>
+          <li class="price">R$ 35,00</li>
+          <!-- <li class="cta-button"><input type="radio" name="pacote" value="" id="pacote3"></li> -->
+        </ul>
+      </div>
+
+      Opções de minicursos(1º campo cursos do dia 19/01 e 2º cursos do dia 20/01: <br />
+     <%= f.fields_for :registereds do |subf| %>
+       <div class="field">
+         <%= subf.collection_select :course_id , Course.available(subf.object.category), :id, :name, prompt: "Nenhum" %>
+       </div>
+     <% end %>
+    
+
+
+     <div class="actions">
+       <%= f.submit "Cadastrar" ,class: 'button radius'%>
+     </div>
+     <%# render "devise/shared/links" %>
+   <% end %>
+
+
+
+</div>
+
+</div>

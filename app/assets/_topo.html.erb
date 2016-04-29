@@ -1,0 +1,65 @@
+<!-- Navigation -->
+<div class="contain-to-grid sticky">
+
+  <nav class="top-bar" data-topbar>
+
+    <ul class="title-area">
+      <li class="name">
+        <h1><%= link_to image_tag('logo.png'), menu_index_path, class: "logo show-for-small-only"%></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+
+
+    <section class="top-bar-section">
+
+      <div class="logo-wrapper hide-for-small-only">
+        <div class="logo">
+          <%= link_to image_tag('logo.png'), menu_index_path%>
+        </div>
+      </div>
+
+      <ul class="menu_itens">
+
+        <li ><%= link_to "Home", menu_index_path%></li>
+
+        <li class="has-dropdown">
+          <%= link_to "Evento"%>
+          <ul class="dropdown">
+            <li class="title back js-generated">Voltar</li>
+            <li><%= link_to "Apresentação", apresentacao_index_path%></li>
+            <li><%= link_to "Informações úteis", comite_cientifico_index_path%></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <%= link_to "Submissão"%>
+          <ul class="dropdown">
+            <li class="title back js-generated">Voltar</li>
+            <li><%= link_to "Artigos", artigos_index_path%></li>
+          </ul>
+        </li>
+
+        <% if user_signed_in?%>
+              <li><%= link_to "Acompanhar", registres_painel_path%></li>
+             <% end %> 
+             
+        <li><%= link_to "Programação", programacao_index_path%></li>
+
+        <li><%= link_to "Parceiros", parceiros_index_path%></li>
+
+        <li><%= link_to "Contato", new_contact_path %></li>
+                
+        <li>
+          <% if user_signed_in?%>
+          <%= link_to "Sair", destroy_user_session_path,  method: :delete, data: { confirm: 'Você deseja sair??' } %></li>
+          <% else %>
+          <%= link_to "Login", new_user_session_path %></li>
+          <% end %>
+
+
+        </ul>
+      </section>
+    </nav>
+
+  </div><!-- /navigation -->

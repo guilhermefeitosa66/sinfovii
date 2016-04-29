@@ -1,0 +1,25 @@
+<%= form_for(@panelist) do |f| %>
+  <% if @panelist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@panelist.errors.count, "error") %> prohibited this panelist from being saved:</h2>
+
+      <ul>
+      <% @panelist.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :article %><br>
+    <%= f.text_field :article %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

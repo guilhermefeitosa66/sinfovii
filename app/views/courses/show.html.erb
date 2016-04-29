@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @course.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @course.description %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @course.category %>
+</p>
+
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Back', administrators_path %>
+
+<hr>
+<p>
+  <h3>Lista de membros confirmados</h3>
+  <% @membros.each do |membro|%>
+    <%= membro.user.name %><br>
+  <% end %>
+</p

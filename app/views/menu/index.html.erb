@@ -1,0 +1,132 @@
+<div id="slider">
+      <ul class="orbit-ul" data-orbit="" data-options=" animation: 'fade';bullets: true;timer: true;pause_on_hover: false;navigation_arrows: false;slide_number: false;">
+        <li class="orbit-item orbit-item-1"></li>
+        <li class="orbit-item orbit-item-2"></li>
+        <li class="orbit-item orbit-item-3"></li>
+      </ul>
+</div>
+<div class="row">
+
+  <div class="large-12 columns">
+    <div class="panel">
+      <h4>O que é o SINFO?</h4>
+      <div class="row">
+        <div class="large-12 columns">
+          <p>É o Simpósio de Sistemas de Informação, da Universidade Federal do Piauí, construido pelo conjunto do curso. Em sua sétima edição, que acontecerá <strong>entre os dias 19 e 21</strong> de janeiro de 2016, traz o tema Internet das coisas como discussão central de suas atividades. Serão dispostos espaços de discussão e construção do conhecimento, como palestras e minicursos, além de workshops, start-up's e demais demonstrações tecnológicas.</p>
+          </div>
+
+
+    </div>
+    <%= link_to "Saiba Mais", apresentacao_index_path, class: 'button radius'%>
+
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="large-6 columns">
+    <div class="panel">
+      <h4>Inscreva-se</h4>
+      <div class="row">
+        <div class="large-8 columns">
+          <p>Garanta já sua vaga!</p>
+        </div>
+        <div class="large-4 columns">
+           <%= link_to "Inscreva-se", new_user_registration_path, class: 'button radius'%>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="large-6 columns">
+    <div class="panel">
+      <h4>Programação</h4>
+      <div class="row">
+        <div class="large-8 columns">
+          <p>Acompanhe tudo que vai acontecer!</p>
+        </div>
+        <div class="large-4 columns">
+          <%= link_to "Confira",programacao_index_path, class: 'button radius'%>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="large-4 columns">
+    <%= image_tag('MesaRedonda.jpg')%>
+    <h4>Exposições</h4>
+    <p class= "text-justify">Onde o contraponto de opiniões e vivências que cercam a área da computação é o objetivo central. Nesses espaços, serão apresentadas start'ups workshops e trabalhos desenvolvidos na região.</p>
+  </div>
+
+  <div class="large-4 columns">
+    <%= image_tag('minicurso.png') %>
+    <h4>Minicursos</h4>
+    <p class= "text-justify">
+      Que com mais especifidade, levarão ao participante um conteúdo técnico, detalhado e prático acerca das ferramentas abordadas, que serão: Android; Arduino; Python; Latex; Desenvolvimento de Jogos; Gestor Box; Edição de Imagens ; E Aplicações Web Real-Time com NodeJS e Ruby on Rails;
+    </p>
+  </div>
+
+  <div class="large-4 columns">
+    <%= image_tag('Palestra.jpg') %>
+    <h4>Palestras</h4>
+    <p class= "text-justify">Para que os participantes possam conhecer o trabalho apresentado pelos convidados de maneira mais clara e se atualizarem dos assuntos abordados, podendo desenvolver projetos pessoais ou tirar dúvidas decorrentes destes espaços. As temáticas serão: A Internet das coisas; Processamento de Imagens e Algoritmos Genéticos;
+      </p>
+  </div>
+</div>
+
+
+
+
+<div class="row">
+  <h4>PALESTRANTES CONFIRMADOS</h4>
+</div>
+
+<div class="row">
+  <div class="large-3 columns">
+      <%= image_tag('Steve.jpg', class: "img-thumbnail")%>
+    <h4>Aplicação de apoio à decisão</h4>
+    <h6 class="subheader">Steve Ataky Tsham Mpinda</h6>
+    <p class= "text-justify">Doutorando e mestre em Ciência da Computação pela Universidade Federal de São Carlos (2015), possui bacharelado em Ciência da Computação pela Universidade Federal do Maranhão (2014) e graduação em Matemática-Computacional pela Université de Kinshasa (2009). Sua área de conhecimento é diversificada, contendo temas em Ciência da Computação, Matemática aplicada, Probabilidade e Estatística, envolvendo Mineração de (dados, grafos e imagens), Aprendizado de Máquina, Visão Computacional, Banco de Dados (relacional e orientado a grafo), Engenharia de Software, Sistemas distribuidos, Pesquisa Operacional, Processos Estocáticos, Cadeias de Markov, Estatística decisional e preditiva, Modelos de regressão Linear e Teoria dos Grafos.</p>
+    <a href = "http://lattes.cnpq.br/1031971059949770"> -> Lattes </a>
+  </div>
+
+  <div class="large-3 columns">
+      <%= image_tag('Veras.jpg', class: "img-thumbnail")%>
+
+    <h4>Introdução ao Diagnóstico Auxiliado por Computador</h4>
+    <h6 class="subheader">Rodrigo de Melo Souza Veras</h6>
+
+    <p class= "text-justify" >Possui graduação em Bacharelado Em Ciência da Computação pela Universidade Federal do Piauí (2005), mestrado em Ciência da Computação pela Universidade Federal do Ceará (2007) e doutorado em Engenharia de Teleinformática, também pela UFC. Atualmente é professor do Departamento de Computação da Universidade Federal do Piauí. Tem experiência na área de Computação, com ênfase em Processamento de Imagens, atuando principalmente nos seguintes temas: diagnóstico auxiliado por computador e reconhecimento de padrões
+      <a href = "http://lattes.cnpq.br
+      /2634254790193199"> -> Lattes </a>
+    </p>
+  </div>
+
+  <div class="large-3 columns">
+      <%= image_tag('Harilton.jpeg', class: "img-thumbnail")%>
+
+    <h4>Internet das Coisas</h4>
+    <h6 class="subheader">Harilton da Silva Araújo</h6>
+
+    <p class= "text-justify" >Possui Graduação em Processamento de Dados (2000) e Especialização em Informática pela Universidade Federal do Ceará - UFC (2001). Concluiu Mestrado (2011) em Informática Aplicada pela Universidade de Fortaleza - UNIFOR. É integrante dos Grupos de Pesquisa em Redes de Sensores Sem Fio da Estácio|CEUT e do Centro de Ciências Tecnológicas CCT da UNIFOR. É Membro do Conselho Editorial da Revista International Journal of Managing Information Technology (IJMIT) que é associada a Academy & Industry Research Collaboration Center (AIRCC). É professor e coordenador do curso de Ciência da Computação da Estácio|CEUT (Núcleo Teresina - Piauí). É Oficial do Exército Brasileiro - R2 (Informática) atuando na área de consultoria. Tem experiência na área de Ciência da Computação, com ênfase em Redes de Comunicação de Dados, Redes de Sensores sem Fio, Internet das Coisas - IoT, Telemática e Segurança da Informação.
+      <a href = "http://lattes.cnpq.br/0059610168184427"> -> Lattes </a>      
+    </p>
+  </div>
+
+
+
+  <div class="large-3 columns">
+      <%= image_tag('Wener.jpg', class: "img-thumbnail")%>
+
+    <h4>Algoritmos Genéticos</h4>
+    <h6 class="subheader">Wener Borges de Sampaio</h6>
+
+    <p class= "text-justify">Possui graduação em Bacharelado em Ciências da Computação pela Universidade Federal do Piauí (2005), mestrado (2009) e doutorado (2015) em Engenharia de Eletricidade, pela Universidade Federal do Maranhão, com habilitação em Computação Gráfica. Possui experiência em Ciências da Computação com ênfase em processamento de imagens, visão computacional, computação evolutiva e inteligência artificial. Atualmente é professor adjunto da Universidade Federal do Maranhão.
+      <a href = "http://lattes.cnpq.br/7739379729347821"> -> Lattes </a>      
+    </p>
+  </div>
+
+</div>
+
+
